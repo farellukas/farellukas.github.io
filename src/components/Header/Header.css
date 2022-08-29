@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    padding: auto;
+    display: grid;
+}
+
+a {
+    position: relative;
+    margin: 0.5em;
+    color: #ADBED2;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-family: 'Fira Code';
+    font-weight: 500;
+}
+
+a:hover {
+    left: 0.2em;
+}
