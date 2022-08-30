@@ -5,8 +5,8 @@ function Header() {
   return (
     <div className="header-container">
       <div className="header-link-container">
-        <a href="/" className="header-link">
-          HOME
+        <a href="/about" className="header-link">
+          ABOUT ME
         </a>
         <a href="/projects" className="header-link">
           PROJECTS
