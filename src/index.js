@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './components/Header/Header';
+import TitlePage from './components/TitlePage/TitlePage';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -8,6 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Header />
+    <TitlePage />
   </React.StrictMode>
 );
 

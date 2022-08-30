@@ -3,8 +3,8 @@ import './Header.css'
 
 function Header() {
   return (
-    <div>
-      <header>
+    <div className="header-container">
+      <div className="header-link-container">
         <a href="/" className="header-link">
           HOME
         </a>
@@ -14,7 +14,7 @@ function Header() {
         <a href="/contact" className="header-link">
           CONTACT
         </a>
-      </header>
+      </div>
     </div>
   )
 }
