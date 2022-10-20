@@ -6,5 +6,7 @@
 
 <Router>
   <Navbar />
-  <Route path="/" component={About} />
+  <Route path="/">
+    <About />
+  </Route>
 </Router>
