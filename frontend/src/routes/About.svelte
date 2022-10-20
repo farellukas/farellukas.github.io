@@ -1,7 +1,7 @@
 <script>
 </script>
 
-<main class="flex h-screen justify-center items-center">
+<main class="flex h-screen justify-center items-center pt-[4.5rem]">
   <div class="flex gap-6 justify-center">
     <div class="flex flex-col shadow-[8px_0_0_black] pr-4">
       <h1 class="font-mono font-bold text-6xl text-right">Farel</h1>

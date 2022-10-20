@@ -9,7 +9,7 @@
   }
 </script>
 
-<nav class="flex items-stretch shadow-[0_4px_0_black] absolute w-full">
+<nav class="flex items-stretch shadow-[0_4px_0_black] absolute w-full bg-white">
   <Link
     to="/"
     class="flex-none py-4 px-8 font-mono font-bold text-4xl"
