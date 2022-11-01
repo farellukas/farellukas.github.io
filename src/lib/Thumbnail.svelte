@@ -9,6 +9,9 @@
 
   export let project: Project;
   let showDesc = false;
+  const customIconStyle = {
+    express: "original",
+  };
 
   function toggleDesc() {
     showDesc = !showDesc;
@@ -26,28 +29,41 @@
 <div
   class="w-full aspect-square {project.thumbnail
     ? 'bg-[url({project.thumbnail})] bg-cover'
-    : 'bg-black'} flex flex-col justify-center items-center font-mono text-white p-10"
+    : 'bg-black'} flex flex-col justify-center items-center font-mono text-white p-8"
   on:click={toggleDesc}
   on:keypress={(event) => {
-    if (event.key == " ") {
+    if (event.key == "\n") {
       toggleDesc();
     }
   }}
 >
   {#if !showDesc}
-    <h5 class="font-bold text-2xl">{project.name}</h5>
-    <p class="text-base">(click to see more)</p>
+    <h5 class="font-bold text-2xl text-center">{project.name}</h5>
+    <p class="text-base text-center">(click to see more)</p>
   {:else}
-    <p class="text-base border-b-2 border-t-white basis-1/2">
+    <p class="text-base pb-4 flex-grow">
       {project.desc}
     </p>
-    <div class="basis-1/2 w-full">
-      <h6 class="font-bold text-base text-center p-4">Tools Used</h6>
-      <div class="grid grid-cols-3 justify-items-center p-4">
+    <div class="w-full border-y-2 py-4 border-t-white">
+      <h6 class="font-bold text-base text-center">Tools Used</h6>
+      <div class="grid grid-cols-3 justify-items-center gap-4 pt-4">
         {#each project.toolsUsed as tool}
-          <i class={`devicon-${tool}-plain text-4xl`} />
+          <i
+            class={`devicon-${tool}-${
+              customIconStyle[tool] ? customIconStyle[tool] : "plain"
+            } text-4xl`}
+          />
         {/each}
       </div>
     </div>
+    <a
+      on:click|stopPropagation
+      href={project.repo}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="pt-4"
+    >
+      <i class="devicon-github-original text-4xl" />
+    </a>
   {/if}
 </div>
