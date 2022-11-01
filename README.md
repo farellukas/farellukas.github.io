@@ -1,6 +1,6 @@
 # farellukas.github.io
 
-farellukas.github.io is my personal portfolio website made with svelte to get to know more about me!
+[farellukas.github.io](farellukas.github.io) is my personal portfolio website made with svelte to get to know more about me!
 
 ## Project Status
 
