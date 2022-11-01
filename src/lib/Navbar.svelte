@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
   import { Link } from "svelte-routing";
   import github from "../assets/github.svg";
   import linkedin from "../assets/linkedin.svg";
 
   let path = window.location.pathname;
-  function updatePath(newPath) {
+  function updatePath(newPath: string) {
     path = newPath;
   }
 </script>
