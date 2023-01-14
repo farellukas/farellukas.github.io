@@ -3,6 +3,11 @@
   import l_arrow from "../assets/l_arrow.svg";
   import r_arrow from "../assets/r_arrow.svg";
 
+  // import previews
+  import farellukas from "../assets/previews/farellukas.png";
+  import vcard_generator from "../assets/previews/vcard_generator.gif";
+  import chew_finder from "../assets/previews/chew_finder.gif";
+
   type Project = {
     preview: string;
     name: string;
@@ -13,21 +18,21 @@
 
   const projects: Project[] = [
     {
-      preview: "/assets/previews/farellukas.png",
+      preview: farellukas,
       name: "farellukas.github.io",
       desc: "This project is the website you are seeing right now. It is my personal portfolio website that I will use to showcase my skills and experience.",
       tools: ["svelte", "tailwindcss", "typescript"],
       repo: "https://github.com/farellukas/farellukas.github.io",
     },
     {
-      preview: "/assets/previews/vcard_generator.gif",
+      preview: vcard_generator,
       name: "vCard QR Code Generator",
       desc: "A web application that generates a QR code containing a customized virtual contact file.",
       tools: ["python", "django", "bootstrap"],
       repo: "https://github.com/farellukas/vcard-qrcode-gen",
     },
     {
-      preview: "/assets/previews/chew_finder.gif",
+      preview: chew_finder,
       name: "Chew Finder",
       desc: "A web application that helps users find new restaurants to eat in a dating app style.",
       tools: ["react", "tailwindcss", "typescript", "express", "nodejs"],
