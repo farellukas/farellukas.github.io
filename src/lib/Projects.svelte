@@ -16,7 +16,7 @@
       preview: "/src/assets/previews/farellukas.png",
       name: "farellukas.github.io",
       desc: "This project is the website you are seeing right now. It is my personal portfolio website that I will use to showcase my skills and experience.",
-      tools: ["svelte", "tailwind", "typescript"],
+      tools: ["svelte", "tailwindcss", "typescript"],
       repo: "https://github.com/farellukas/farellukas.github.io",
     },
     {
@@ -30,7 +30,7 @@
       preview: "/src/assets/previews/chew_finder.gif",
       name: "Chew Finder",
       desc: "A web application that helps users find new restaurants to eat in a dating app style.",
-      tools: ["react", "tailwind", "typsescript", "node", "express"],
+      tools: ["react", "tailwindcss", "typescript", "express", "nodejs"],
       repo: "https://github.com/farellukas/chew-finder",
     },
   ];
@@ -46,6 +46,7 @@
 </script>
 
 <svelte:head>
+  <!-- import icons CDN -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
@@ -58,15 +59,29 @@
 
     <ProjectContent project={projects[i]} />
 
+    <!-- navigation links -->
     <div class="flex justify-between">
-      <img src={l_arrow} alt="left arrow" on:click={i !== 0 && prevProject} />
+      <!-- previous project -->
+      <img
+        src={l_arrow}
+        alt="left arrow"
+        on:click={i !== 0 && prevProject}
+        on:keypress={i !== 0 && prevProject}
+        class={i === 0 && "invisible"}
+      />
+
+      <!-- repo link -->
       <a href={projects[i].repo} target="_blank" rel="noreferrer">
-        <i class="devicon-github-original text-[32px]" />
+        <i class="devicon-github-original text-[2rem]" />
       </a>
+
+      <!-- next project -->
       <img
         src={r_arrow}
         alt="right arrow"
         on:click={i !== projects.length - 1 && nextProject}
+        on:keypress={i !== projects.length - 1 && nextProject}
+        class={i === projects.length - 1 && "invisible"}
       />
     </div>
   </div>
