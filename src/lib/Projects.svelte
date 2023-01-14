@@ -13,21 +13,21 @@
 
   const projects: Project[] = [
     {
-      preview: "/src/assets/previews/farellukas.png",
+      preview: "/assets/previews/farellukas.png",
       name: "farellukas.github.io",
       desc: "This project is the website you are seeing right now. It is my personal portfolio website that I will use to showcase my skills and experience.",
       tools: ["svelte", "tailwindcss", "typescript"],
       repo: "https://github.com/farellukas/farellukas.github.io",
     },
     {
-      preview: "/src/assets/previews/vcard_generator.gif",
+      preview: "/assets/previews/vcard_generator.gif",
       name: "vCard QR Code Generator",
       desc: "A web application that generates a QR code containing a customized virtual contact file.",
       tools: ["python", "django", "bootstrap"],
       repo: "https://github.com/farellukas/vcard-qrcode-gen",
     },
     {
-      preview: "/src/assets/previews/chew_finder.gif",
+      preview: "/assets/previews/chew_finder.gif",
       name: "Chew Finder",
       desc: "A web application that helps users find new restaurants to eat in a dating app style.",
       tools: ["react", "tailwindcss", "typescript", "express", "nodejs"],
