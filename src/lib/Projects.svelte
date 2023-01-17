@@ -1,7 +1,5 @@
 <script lang="ts">
   import ProjectContent from "./ProjectContent.svelte";
-  import l_arrow from "../assets/l_arrow.svg";
-  import r_arrow from "../assets/r_arrow.svg";
 
   // import previews
   import farellukas from "../assets/previews/farellukas.png";
@@ -65,15 +63,18 @@
     <ProjectContent project={projects[i]} />
 
     <!-- navigation links -->
-    <div class="flex justify-between">
+    <div class="flex justify-between items-center font-semibold select-none">
       <!-- previous project -->
-      <img
-        src={l_arrow}
-        alt="left arrow"
+
+      <p
         on:click={i !== 0 && prevProject}
         on:keypress={i !== 0 && prevProject}
-        class={i === 0 && "invisible"}
-      />
+        class={`h-8 px-2 flex items-center bg-[#F5EFE6] text-black hover:underline ${
+          i === 0 && "invisible"
+        }`}
+      >
+        prev
+      </p>
 
       <!-- repo link -->
       <a href={projects[i].repo} target="_blank" rel="noreferrer">
@@ -81,13 +82,15 @@
       </a>
 
       <!-- next project -->
-      <img
-        src={r_arrow}
-        alt="right arrow"
+      <p
         on:click={i !== projects.length - 1 && nextProject}
         on:keypress={i !== projects.length - 1 && nextProject}
-        class={i === projects.length - 1 && "invisible"}
-      />
+        class={`h-8 px-2 flex items-center bg-[#F5EFE6] text-black hover:underline ${
+          i === projects.length - 1 && "invisible"
+        }`}
+      >
+        next
+      </p>
     </div>
   </div>
 </section>
