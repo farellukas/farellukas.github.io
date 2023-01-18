@@ -35,7 +35,7 @@
   <div class="flex flex-col gap-2">
     <p class="font-bold">tools used:</p>
 
-    <div class="flex gap-2 flex-wrap">
+    <div class="flex gap-4 flex-wrap">
       {#each project.tools as tool}
         <i
           class={`devicon-${tool}-${
