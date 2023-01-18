@@ -50,9 +50,13 @@
   }
 
   ul {
-    @apply list-disc;
-    @apply list-inside;
+    @apply list-none;
+    @apply list-outside;
     @apply font-mono;
+  }
+
+  html {
+    @apply scroll-smooth;
   }
 
   body {
